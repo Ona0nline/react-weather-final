@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import axios from "axios"
 import "./Weather.css"
 
-export default function Weather(){
+export default function Weather(props){
  
   const[weatherData,setWeatherData] = useState({ready:false})
 
@@ -45,7 +45,7 @@ if (weatherData.ready){
         </div>
 
       </form>
-      <h1>Bloemfontein, South Africa</h1>
+      <h1>{props.defaultCity}, South Africa</h1>
       <div className="Description">
         <p>Friday, 14:23</p>
         <p className="text-capitalize">{weatherData.description}</p>
@@ -71,9 +71,8 @@ if (weatherData.ready){
 
       </div>
 } else{
-  let city = "Bloemfontein"
 
-  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=444t95o4afedabca0957fcb3605bfd54`
+  let url = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=444t95o4afedabca0957fcb3605bfd54`
   axios.get(url).then(displayWeather)
 
   return "Loading"
