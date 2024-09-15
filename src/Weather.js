@@ -3,12 +3,16 @@ import axios from "axios"
 import "./Weather.css"
 import WeatherInfo from "./WeatherInfo"
 import WeatherForecast from "./WeatherForecast"
+import Loading from "./Loading"
+import "./Poppins"
 
 export default function Weather(props){
   
   const[city,setCity] = useState(props.defaultCity)
   const[weatherData,setWeatherData] = useState({ready:false})
+
   function displayWeather(response){
+    // console.log(response.data.coordinates)
     setWeatherData({
     
       ready:true,
@@ -39,7 +43,6 @@ export default function Weather(props){
     event.preventDefault()
     // Handle making the api call
     Search()
-    console.log(city)
   }
 
   function handleCityChange(event){
@@ -72,7 +75,7 @@ if (weatherData.ready){
       </div>
 } else{
   Search()
-  return "Loading"
+  return <Loading/>
 }
  
 }

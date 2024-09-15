@@ -1,6 +1,7 @@
 body{
   background-color: rgb(192, 225, 255);
   color:aliceblue;
+  font-family: "Poppins";
 }
 
 .Weather{
@@ -51,3 +52,14 @@ body{
   font-size: 38px;
 }
 
+/* Weights: [100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900] Styles: [italic,
+normal] Subsets: [latin,
+latin-ext] */

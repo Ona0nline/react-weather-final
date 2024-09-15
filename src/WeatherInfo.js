@@ -5,6 +5,7 @@ import WeatherTemperature from "./WeatherTemperature"
 // import WeatherForecast from "./WeatherForecast"
 
 export default function WeatherInfo(props){
+
   return (<div>
     <h1>{props.info.city}</h1>
       <div className="Description">
@@ -25,7 +26,7 @@ export default function WeatherInfo(props){
              
             </div>
 
-          {/* <p> </p> */}
+
           </div>
 
           <div className="col-6 phw">
@@ -39,7 +40,6 @@ export default function WeatherInfo(props){
         </div>
       </div>
 
-      {/* <WeatherForecast coordinates={coordinates}/> */}
     
   </div>)
 }
