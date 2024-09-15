@@ -9,11 +9,10 @@ export default function Weather(props){
   const[city,setCity] = useState(props.defaultCity)
   const[weatherData,setWeatherData] = useState({ready:false})
   function displayWeather(response){
-    console.log(response.data)
     setWeatherData({
     
       ready:true,
-      coord: response.data.coordinates,
+      coordinates: response.data.coordinates,
       temperature: parseInt(response.data.temperature.current),
       wind: response.data.wind.speed,
       feelsLike: response.data.temperature.feels_like,
@@ -31,6 +30,10 @@ export default function Weather(props){
   axios.get(url).then(displayWeather)
 
   }
+
+  // useEffect(() => {
+  //   Search(); // Only call Search when the component mounts or city changes
+  // }, [city]);
 
   function handleSubmit(event){
     event.preventDefault()
@@ -64,7 +67,7 @@ if (weatherData.ready){
       </form>
 
       <WeatherInfo info={weatherData}/>
-      <WeatherForecast coordinates={weatherData.coord}/>
+      <WeatherForecast coordinates={weatherData.coordinates}/>
 
       </div>
 } else{

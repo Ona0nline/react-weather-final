@@ -2,7 +2,7 @@ import React from "react"
 import FormattedDate from "./FormattedDate"
 import WeatherIcon from "./WeatherIcon"
 import WeatherTemperature from "./WeatherTemperature"
-import WeatherForecast from "./WeatherForecast"
+// import WeatherForecast from "./WeatherForecast"
 
 export default function WeatherInfo(props){
   return (<div>
@@ -39,7 +39,7 @@ export default function WeatherInfo(props){
         </div>
       </div>
 
-      <WeatherForecast/>
+      {/* <WeatherForecast coordinates={coordinates}/> */}
     
   </div>)
 }
