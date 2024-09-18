@@ -28,7 +28,7 @@ body{
 }
 
 .form-control{
-  margin-left:10px;
+  /* margin-left:10px; */
 }
 
 .Details{
@@ -41,6 +41,9 @@ body{
   padding: 10px 24px;
   border-radius: 22px;
   background-color: aliceblue;
+  color: rgb(7, 57, 100);
+  font-weight: 800;
+  border:1px solid aliceblue;
 
 }
 
@@ -52,14 +55,16 @@ body{
   font-size: 38px;
 }
 
-/* Weights: [100,
-200,
-300,
-400,
-500,
-600,
-700,
-800,
-900] Styles: [italic,
-normal] Subsets: [latin,
-latin-ext] */
+@media (max-width: 900px) {
+  .Button{
+    padding: 5px 12px;
+    color: rgb(7, 57, 100)!important;
+    transform: translateX(-30px);
+
+  }
+
+  .form-control{
+    width:170px;
+  }
+  
+}
