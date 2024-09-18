@@ -56,6 +56,7 @@ if (weatherData.ready){
 
       
       <form onSubmit={handleSubmit}>
+        <legend><i>Enter in a city.</i></legend>
         <div className="row">
           <div className="col-9">
                   <input  onChange={handleCityChange} value={city} className="form-control" type="search" placeholder="Enter a city.."/>
